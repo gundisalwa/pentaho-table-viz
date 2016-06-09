@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.pentaho</groupId>
+    <artifactId>pentaho-ce-jar-parent-pom</artifactId>
+    <version>1.2.0</version>
+  </parent>
+
+  <artifactId>pentaho-table-viz</artifactId>
+  <version>7.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>${project.artifactId}</name>
+  <description>Table Visualization</description>
+
+  <developers>
+    <!--developer>
+      <name>Guilherme Raimundo</name>
+      <email>graimundo@pentaho.com</email>
+      <roles>
+        <role>architect</role>
+      </roles>
+    </developer-->
+  </developers>
+
+  <properties>
+    <dependency.pentaho-osgi-bundles.revision>${project.version}</dependency.pentaho-osgi-bundles.revision>
+
+    <dependency.pentaho-kettle.version>${project.version}</dependency.pentaho-kettle.version>
+    <dependency.pentaho-platform.revision>${project.version}</dependency.pentaho-platform.revision>
+
+    <dependency.requirejs.version>2.2.0</dependency.requirejs.version>
+    <dependency.common-ui.revision>${project.version}</dependency.common-ui.revision>
+    <dependency.require-css.version>0.1.8</dependency.require-css.version>
+
+    <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
+    <directory-maven-plugin.version>0.1</directory-maven-plugin.version>
+
+    <frontend-maven-plugin.workingDirectory>${pentaho-det.basedir}</frontend-maven-plugin.workingDirectory>
+    <frontend-maven-plugin.installDirectory>${pentaho-det.basedir}</frontend-maven-plugin.installDirectory>
+    <js.project.list></js.project.list>
+    <!--Test Properties-->
+    <mockito-all.version>1.8.5</mockito-all.version>
+    <log4j12.version>1.7.7</log4j12.version>
+  </properties>
+
+  <dependencyManagement></dependencyManagement>
+
+  <build>
+
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+        <includes>
+          <include>**/*</include>
+        </includes>
+        <excludes>
+          <exclude>META-INF/**/*</exclude>
+        </excludes>
+      </resource>
+
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>META-INF/**/*</include>
+          <include>OSGI-INF/blueprint/*</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <plugins>
+
+    </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <version>${maven-bundle-plugin.version}</version>
+          <extensions>true</extensions>
+          <configuration>
+            <instructions>
+              <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+              <Bundle-Version>${project.version}</Bundle-Version>
+            </instructions>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.karaf.tooling</groupId>
+          <artifactId>karaf-maven-plugin</artifactId>
+          <version>${karaf-maven-plugin.version}</version>
+          <extensions>true</extensions>
+          <configuration>
+            <aggregateFeatures>true</aggregateFeatures>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <modules>
+    <module>impl</module>
+    <!--module>assemblies</module-->
+  </modules>
+</project>
