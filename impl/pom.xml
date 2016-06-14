@@ -18,121 +18,81 @@
   <description>Pentaho Table Viz</description>
 
   <properties>
-    <dependency.pentaho-ee-dsc.revision>${project.version}</dependency.pentaho-ee-dsc.revision>
-    <dependency.pentaho-kettle.version>${project.version}</dependency.pentaho-kettle.version>
+
   </properties>
 
   <profiles>
-    <profile>
-      <id>obfuscated</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-        <property>
-          <name>release</name>
-        </property>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>pentaho</groupId>
-          <artifactId>pentaho-ee-dsc-core</artifactId>
-          <version>${dependency.pentaho-ee-dsc.revision}</version>
-          <type>map</type>
-          <classifier>obf</classifier>
-          <scope>provided</scope>
-        </dependency>
-        <dependency>
-          <groupId>pentaho</groupId>
-          <artifactId>pentaho-ee-dsc-core</artifactId>
-          <version>${dependency.pentaho-ee-dsc.revision}</version>
-          <classifier>obf</classifier>
-          <scope>provided</scope>
-        </dependency>
-      </dependencies>
-    </profile>
+
   </profiles>
 
   <dependencies>
     <!-- Core Dependencies -->
-    <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-det-api-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-det-impl-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
 
     <!-- Internal Dependencies -->
-    <dependency>
-      <groupId>com.pentaho</groupId>
-      <artifactId>pentaho-det-ee-api-pdi</artifactId>
-      <version>${project.version}</version>
-    </dependency>
 
     <!-- Pentaho Dependencies -->
-    <dependency>
-        <groupId>pentaho-kettle</groupId>
-        <artifactId>kettle-core</artifactId>
-        <version>${dependency.pentaho-kettle.version}</version>
-        <scope>provided</scope>
-    </dependency>
 
-    <dependency>
-        <groupId>pentaho-kettle</groupId>
-        <artifactId>kettle-ui-swt</artifactId>
-        <version>${dependency.pentaho-kettle.version}</version>
-        <scope>provided</scope>
-    </dependency>
-
+    <!-- Client Side Dependencies -->
     <dependency>
       <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-extensions</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
+      <artifactId>common-ui</artifactId>
+      <version>${dependency.common-ui.revision}</version>
+      <type>zip</type>
+      <scope>runtime</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>underscorejs</artifactId>
+      <version>${underscore.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>jquery</artifactId>
+      <version>${jquery.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>datatables</artifactId>
+      <version>${datatables.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+
+    <!--
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>datatables.net-bs</artifactId>
+      <version>${datatables.net-bs.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>datatables.net-fixedheader</artifactId>
+      <version>${datatables.net-fixedheader.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>datatables.net-fixedheader-bs</artifactId>
+      <version>${datatables.net-fixedheader-bs.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    -->
+
+
 
     <!-- EE Dependencies -->
-    <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-ee-dsc-core</artifactId>
-      <version>${dependency.pentaho-ee-dsc.revision}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-ee-mock-dsc</artifactId>
-      <version>${dependency.pentaho-ee-dsc.revision}</version>
-      <scope>test</scope>
-    </dependency>
 
     <!-- Test dependencies -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-all</artifactId>
-      <version>${mockito-all.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>${log4j12.version}</version>
-      <scope>test</scope>
-    </dependency>
+
+
   </dependencies>
 
   <build>
