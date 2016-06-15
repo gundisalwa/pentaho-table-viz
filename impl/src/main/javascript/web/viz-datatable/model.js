@@ -1,6 +1,7 @@
 define([
-  "pentaho/visual/base/model"
-], function(baseModelFactory) {
+  "pentaho/visual/base/model",
+  "pentaho-table-viz-impl/7.0-SNAPSHOT/viz-datatable/view"
+], function(baseModelFactory, View) {
   "use strict";
 
   return function(context) {
@@ -9,7 +10,7 @@ define([
     return BaseModel.extend({
       type: {
         id: "viz-datatable",
-        view: "view",
+        view: View,
         props: [
           {
             name: "scrollY"
