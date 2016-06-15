@@ -1,10 +1,9 @@
 define([
   "pentaho/visual/base/View",
   "pentaho/data/filter",
-  "./underscore",
+  "underscore",
   "jquery",
-  "/datatables"
-  //"css!node_modules/datatables.net-bs/css/dataTables.bootstrap",
+  "datatables"
   //"css!node_modules/datatables.net-scroller-bs/css/scroller.bootstrap"
 ], function(BaseView, filter, _, $) {
   "use strict";
