@@ -6,9 +6,11 @@
 
     <bundle dependency="false">pentaho-platform-plugin-mvn:pentaho/common-ui/${dependency.common-ui.revision}/zip</bundle>
 
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/underscorejs/${underscore.version}</bundle>
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/jquery/${jquery.version}</bundle>
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/underscore/${underscore.version}</bundle>
+
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars/datatables/${datatables.version}</bundle>
+
+
 
     <!--
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-bs/${datatables.net-bs.version}</bundle>

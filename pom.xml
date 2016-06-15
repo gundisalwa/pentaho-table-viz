@@ -32,7 +32,7 @@
     <dependency.common-ui.revision>${project.version}</dependency.common-ui.revision>
 
     <underscore.version>1.8.3</underscore.version>
-    <jquery.version>2.2.1</jquery.version>
+
     <datatables.version>1.10.11</datatables.version>
 
     <!--

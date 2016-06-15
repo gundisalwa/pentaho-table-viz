@@ -42,18 +42,12 @@
     </dependency>
 
     <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>underscorejs</artifactId>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>underscore</artifactId>
       <version>${underscore.version}</version>
       <scope>runtime</scope>
     </dependency>
 
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>jquery</artifactId>
-      <version>${jquery.version}</version>
-      <scope>runtime</scope>
-    </dependency>
 
     <dependency>
       <groupId>org.webjars</groupId>
