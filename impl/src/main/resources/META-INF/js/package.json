@@ -13,8 +13,7 @@
   },
 
   "dependencies": {
-    "underscorejs": "${underscore.version}",
-    "jquery": "${jquery.version}",
+    "underscore": "${underscore.version}",
     "datatables": "${datatables.version}"
   }
 }
