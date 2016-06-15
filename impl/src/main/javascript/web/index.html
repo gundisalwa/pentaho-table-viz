@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Viz DataTable</title>
+
+  <script language="javascript" type="text/javascript" src="http://localhost:9051/requirejs-manager/js/require-init.js"></script>
+
+  <script type="text/javascript">
+    (function(w) {
+      "use strict";
+
+      requireCfg.paths['pentaho/i18n'] = "pentaho-table-viz-impl/7.0-SNAPSHOT/i18nMock";
+
+      require.config( requireCfg );
+
+    })(window);
+  </script>
+
+  <script>
+  (function() {
+    "use strict";
+
+    require(["pentaho-table-viz-impl/7.0-SNAPSHOT/main"]);
+  })();
+  </script>
+</head>
+<body>
+  <div id="output" style="width: 80%; margin: 0 auto; margin-top: 40px;"></div>
+</body>
+</html>
