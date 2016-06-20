@@ -14,6 +14,7 @@
 
   "dependencies": {
     "underscore": "${underscore.version}",
-    "datatables": "${datatables.version}"
+    "datatables": "${datatables.version}",
+    "jquery": "${jquery.version}"
   }
 }
