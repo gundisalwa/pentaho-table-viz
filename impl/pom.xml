@@ -50,9 +50,9 @@
 
 
     <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>datatables</artifactId>
-      <version>${datatables.version}</version>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>datatables.net</artifactId>
+      <version>${datatables.net.version}</version>
       <scope>runtime</scope>
     </dependency>
 
@@ -63,9 +63,6 @@
       <scope>runtime</scope>
     </dependency>
 
-
-
-    <!--
     <dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>datatables.net-bs</artifactId>
@@ -86,7 +83,20 @@
       <version>${datatables.net-fixedheader-bs.version}</version>
       <scope>runtime</scope>
     </dependency>
-    -->
+
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>datatables.net-scroller</artifactId>
+      <version>${datatables.net-scroller.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>bootstrap-css</artifactId>
+      <version>${bootstrap-css.version}</version>
+      <scope>runtime</scope>
+    </dependency>
 
 
 

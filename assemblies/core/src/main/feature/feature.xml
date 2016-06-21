@@ -8,21 +8,20 @@
 
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/underscore/${underscore.version}</bundle>
 
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/datatables/${datatables.version}</bundle>
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net/${datatables.net.version}</bundle>
 
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars/jquery/${jquery.version}</bundle>
 
-
-
-    <!--
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-bs/${datatables.net-bs.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-fixedheader/${datatables.net-fixedheader.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-fixedheader-bs/${datatables.net-fixedheader-bs.version}</bundle>
-    -->
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-scroller/${datatables.net-scroller.version}</bundle>
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/bootstrap-css/${bootstrap-css.version}</bundle>
+    <!-- <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/require-css/${require-css.version}</bundle> -->
 
-    <!--
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/require-css/${dependency.require-css.version}</bundle>
-    -->
+
+     <!-- <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/require-css/${dependency.require-css.version}</bundle>
+      -->
   </feature>
 
 </features>

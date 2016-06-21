@@ -1,6 +1,6 @@
 define([
   "pentaho/visual/base/model",
-  "pentaho-table-viz-impl/7.0-SNAPSHOT/viz-datatable/view"
+  "pentaho-table-viz-impl/viz-datatable/view"
 ], function(baseModelFactory, View) {
   "use strict";
 

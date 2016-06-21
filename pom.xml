@@ -33,21 +33,23 @@
 
     <underscore.version>1.8.3</underscore.version>
 
-    <datatables.version>1.10.11</datatables.version>
+    <datatables.net.version>1.10.12</datatables.net.version>
 
     <jquery.version>2.2.1</jquery.version>
 
-    <!--
+
     <datatables.net-bs.version>1.10.12</datatables.net-bs.version>
     <datatables.net-fixedheader.version>3.1.1</datatables.net-fixedheader.version>
     <datatables.net-fixedheader-bs.version>3.1.1</datatables.net-fixedheader-bs.version>
-    -->
+    <datatables.net-scroller.version>1.4.0</datatables.net-scroller.version>
+    <bootstrap-css.version>3.3.6</bootstrap-css.version>
 
-    <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
-    <directory-maven-plugin.version>0.1</directory-maven-plugin.version>
 
-    <js.project.list></js.project.list>
-    <!--Test Properties-->
+   <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
+   <directory-maven-plugin.version>0.1</directory-maven-plugin.version>
+
+   <js.project.list></js.project.list>
+   <!--Test Properties-->
   </properties>
 
   <dependencyManagement>
