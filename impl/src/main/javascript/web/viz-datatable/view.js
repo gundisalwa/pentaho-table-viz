@@ -3,8 +3,16 @@ define([
   "pentaho/data/filter",
   "underscore",
   "jquery",
-  "datatables"
-  //"css!node_modules/datatables.net-scroller-bs/css/scroller.bootstrap"
+  "datatables.net",
+  "datatables.net-bs",
+  "datatables.net-fixedheader",
+  "datatables.net-scroller",
+  "css!bootstrap-css/css/bootstrap.css",
+  "css!datatables.net-bs/css/dataTables.bootstrap.css",
+  "css!datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.css",
+  /*,
+  "datatables.net-fixedheader-bs",
+  "css!datatables.net-scroller-bs/css/scroller.bootstrap"*/
 ], function(BaseView, filter, _, $) {
   "use strict";
 
@@ -34,8 +42,8 @@ define([
         data:           tData.data,
         columns:        tData.columns,
 
-        //scrollY:        this.model.getv("scrollY"),
-        fixedHeader:       this.model.getv("fixedHeader")
+        scrollY:        this.model.getv("scrollY"),
+        fixedHeader:    this.model.getv("fixedHeader")
       } );
     },
 

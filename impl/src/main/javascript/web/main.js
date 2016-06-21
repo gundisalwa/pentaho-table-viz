@@ -3,7 +3,7 @@ define(
     "underscore",
     "pentaho/type/Context",
     "pentaho/data/Table",
-    "pentaho-table-viz-impl/7.0-SNAPSHOT/viz-datatable/model",
+    "pentaho-table-viz-impl/viz-datatable/model",
     "pentaho/type/configurationService"
   ], function(_, Context, Table, myModelFactory, configurationService) {
     "use strict";

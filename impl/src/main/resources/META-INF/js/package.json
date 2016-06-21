@@ -15,6 +15,11 @@
   "dependencies": {
     "underscore": "${underscore.version}",
     "datatables": "${datatables.version}",
+    "datatables.net-bs": "${datatables.net-bs.version}",
+    "datatables.net-fixedheader": "${datatables.net-fixedheader.version}",
+    "datatables.net-fixedheader-bs": "${datatables.net-fixedheader-bs.version}",
+    "datatables.net-scroller": "${datatables.net-scroller.version}",
+    "bootstrap-css": "${bootstrap-css.version}",
     "jquery": "${jquery.version}"
   }
 }
