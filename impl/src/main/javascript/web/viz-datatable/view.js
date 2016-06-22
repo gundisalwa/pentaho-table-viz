@@ -6,17 +6,15 @@ define([
   "datatables.net",
   "datatables.net-bs",
   "datatables.net-fixedheader",
+  "datatables.net-colreorder",
   "datatables.net-scroller",
   "css!bootstrap-css/css/bootstrap.css",
   "css!datatables.net-bs/css/dataTables.bootstrap.css",
   "css!datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.css",
-  /*,
-  "datatables.net-fixedheader-bs",
-  "css!datatables.net-scroller-bs/css/scroller.bootstrap"*/
+  "css!datatables.net-colreorder-bs/css/colReorder.bootstrap.css",
+  "css!datatables.net-scroller-bs/css/scroller.bootstrap.css"
 ], function(BaseView, filter, _, $) {
   "use strict";
-
-  var dTable;
 
   return BaseView.extend({
 
@@ -24,7 +22,8 @@ define([
     _init: function() {
       this.base();
 
-      $(this._element).append('<table id="content" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">');
+      this.tElement = $('<table class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">');
+      $(this._element).append(this.tElement);
     },
 
     /** @override */
@@ -32,19 +31,34 @@ define([
 
       var tData = parse(this.model.getv("data"));
 
-      if(dTable) {
-        dTable.destory();
-        $('#content').empty();
+      var iScroll = this.model.getv("scroller");
+      var fHeader = this.model.getv("fixedHeader");
+
+      if(this.dTable) {
+        this.dTable.destory();
+        this.tElement.empty();
       }
 
-      dTable = $('#content').DataTable( {
+      this.dTable = this.tElement.DataTable({
 
-        data:           tData.data,
-        columns:        tData.columns,
+        data:             tData.data,
+        columns:          tData.columns,
 
-        scrollY:        this.model.getv("scrollY"),
-        fixedHeader:    this.model.getv("fixedHeader")
-      } );
+        // Built-in features not exposed and disabled by default
+        paging:           iScroll ? true : false,
+        info:             false,
+        filter:           false,
+
+        deferRender:      iScroll ? true : false,
+        scrollCollapse:   iScroll ? true : false,
+
+        // Features exposed on viz model
+        fixedHeader:      iScroll ? false : fHeader,
+        ordering:         this.model.getv("ordering"),
+        colReorder:       this.model.getv("colReorder"),
+        scroller:         this.model.getv("scroller"),
+        scrollY:          this.model.getv("scrollY")
+      });
     },
 
     /** @override */
@@ -71,10 +85,12 @@ define([
     });
 
     _.each(data.implem.rows, function(row, r){
+
         var rData = [];
         _.each(row.c, function(cData, c){
             rData.push(cData.v);
         });
+
         tData.data.push(rData);
     });
 
