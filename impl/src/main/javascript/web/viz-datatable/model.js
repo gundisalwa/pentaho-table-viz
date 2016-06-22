@@ -13,11 +13,29 @@ define([
         view: View,
         props: [
           {
-            name: "scrollY"
+            name: "fixedHeader",
+            type: "boolean",
+            value: true
           },
           {
-            name: "fixedHeader",
-            type: "boolean"
+            name: "ordering",
+            type: "boolean",
+            value: true
+          },
+          {
+            name: "colReorder",
+            type: "boolean",
+            value: true
+          },
+          {
+            name: "scroller",
+            type: "boolean",
+            value: true
+          },
+          {
+            name: "scrollY",
+            type: "number",
+            value: 400
           }
         ]
       }
