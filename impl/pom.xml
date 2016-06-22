@@ -48,18 +48,24 @@
       <scope>runtime</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>jquery</artifactId>
+      <version>${jquery.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>bootstrap-css</artifactId>
+      <version>${bootstrap-css.version}</version>
+      <scope>runtime</scope>
+    </dependency>
 
     <dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>datatables.net</artifactId>
       <version>${datatables.net.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>jquery</artifactId>
-      <version>${jquery.version}</version>
       <scope>runtime</scope>
     </dependency>
 
@@ -93,17 +99,28 @@
 
     <dependency>
       <groupId>org.webjars.bower</groupId>
-      <artifactId>bootstrap-css</artifactId>
-      <version>${bootstrap-css.version}</version>
+      <artifactId>datatables.net-scroller-bs</artifactId>
+      <version>${datatables.net-scroller-bs.version}</version>
       <scope>runtime</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>datatables.net-colreorder</artifactId>
+      <version>${datatables.net-colreorder.version}</version>
+      <scope>runtime</scope>
+    </dependency>
 
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>datatables.net-colreorder-bs</artifactId>
+      <version>${datatables.net-colreorder-bs.version}</version>
+      <scope>runtime</scope>
+    </dependency>
 
     <!-- EE Dependencies -->
 
     <!-- Test dependencies -->
-
 
   </dependencies>
 
