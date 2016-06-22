@@ -1,16 +1,13 @@
 define(
   [
-    "underscore",
     "pentaho/type/Context",
     "pentaho/data/Table",
     "pentaho-table-viz-impl/viz-datatable/model",
     "pentaho/type/configurationService"
-  ], function(_, Context, Table, myModelFactory, configurationService) {
+  ], function(Context, Table, myModelFactory, configurationService) {
     "use strict";
 
     var context = new Context();
-
-    var output = document.getElementById("output");
 
     var MyModel = context.get(myModelFactory);
 
@@ -19,14 +16,14 @@ define(
         width: 800,
         height: 600,
 
-        data: new Table(mockData(1000, 5)),
-
-        scrollY: 500,
-        fixedHeader: true
+        data: new Table(mockData(1000, 5))
       }
     );
 
     model.type.viewClass.then(function(MyView) {
+
+      var output = document.getElementById("output");
+
       var view = new MyView(output, model);
 
       view.render();
@@ -43,8 +40,13 @@ define(
 
       dataset.rows = [];
       for ( var r=0 ; r<rowsNum ; r++ ) {
+
         var label = "Label " + randVal(10, rowsNum);
-        dataset.rows.push({c: [{v: label, f: label}, randVal(10, rowsNum) ]});
+        dataset.rows.push({c: [{v: label, f: label}]});
+
+        for (var i = 0; i < colsNum-1; i++) {
+          dataset.rows[r]["c"].push(randVal(10, rowsNum));
+        }
       }
 
       return dataset;
