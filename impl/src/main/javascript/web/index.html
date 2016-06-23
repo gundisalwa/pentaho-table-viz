@@ -19,12 +19,16 @@
   <script>
   (function() {
     "use strict";
+    window.SESSION_LOCALE = "en";
 
-    require(["pentaho-table-viz-impl_7.0-SNAPSHOT"]);
+    require(["pentaho/i18n-osgi!test.messages", "pentaho-table-viz-impl_7.0-SNAPSHOT"], function(bundle) {
+      $('#title').text(bundle.structured['title']);
+    });
   })();
   </script>
 </head>
 <body>
+  <h1 id="title"></h1>
   <div id="output" style="width: 80%; margin: 0 auto; margin-top: 40px;"></div>
 </body>
 </html>

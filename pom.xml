@@ -66,6 +66,7 @@
         </includes>
         <excludes>
           <exclude>META-INF/**/*</exclude>
+          <exclude>OSGI-INF/blueprint/*</exclude>
         </excludes>
       </resource>
 
