@@ -14,7 +14,7 @@
 
   "dependencies": {
     "underscore": "${underscore.version}",
-    "datatables": "${datatables.version}",
+    "datatables.net": "${datatables.net.version}",
     "datatables.net-bs": "${datatables.net-bs.version}",
     "datatables.net-fixedheader": "${datatables.net-fixedheader.version}",
     "datatables.net-fixedheader-bs": "${datatables.net-fixedheader-bs.version}",
