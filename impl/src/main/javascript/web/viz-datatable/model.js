@@ -11,6 +11,8 @@ define([
       type: {
         id: "viz-datatable",
         view: View,
+        isBrowsable: true,
+        isAbstract: false,
         props: [
           {
             name: "fixedHeader",

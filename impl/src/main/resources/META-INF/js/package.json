@@ -6,14 +6,20 @@
   "main": "main.js",
 
   "packages": [
-    "tableviz"
+    {
+      "name": "viz-datatable",
+      "main": "model"
+    }
   ],
 
   "config": {
+    "pentaho/service": {
+      "${project.artifactId}_${project.version}/viz-datatable" : "pentaho/visual/base"
+    }
   },
 
   "dependencies": {
-    "underscore": "${underscore.version}",
+    "underscorejs": "${underscore.version}",
     "datatables.net": "${datatables.net.version}",
     "datatables.net-bs": "${datatables.net-bs.version}",
     "datatables.net-fixedheader": "${datatables.net-fixedheader.version}",
@@ -22,7 +28,7 @@
     "datatables.net-scroller-bs": "${datatables.net-scroller-bs.version}",
     "datatables.net-colreorder": "${datatables.net-colreorder.version}",
     "datatables.net-colreorder-bs": "${datatables.net-colreorder-bs.version}",
-    "bootstrap-css": "${bootstrap-css.version}",
+    "bootstrap-css": "${bootstrap.version}",
     "jquery": "${jquery.version}"
   }
 }
