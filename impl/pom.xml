@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -18,20 +18,10 @@
   <description>Pentaho Table Viz</description>
 
   <properties>
-
+    <build.javascriptTestConfigDirectory>${project.build.directory}</build.javascriptTestConfigDirectory>
   </properties>
 
-  <profiles>
-
-  </profiles>
-
   <dependencies>
-    <!-- Core Dependencies -->
-
-    <!-- Internal Dependencies -->
-
-    <!-- Pentaho Dependencies -->
-
     <!-- Client Side Dependencies -->
     <dependency>
       <groupId>pentaho</groupId>
@@ -117,23 +107,48 @@
       <version>${datatables.net-colreorder-bs.version}</version>
       <scope>runtime</scope>
     </dependency>
-
-    <!-- EE Dependencies -->
-
-    <!-- Test dependencies -->
-
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+        <includes>
+          <include>**/*</include>
+        </includes>
+        <excludes>
+          <exclude>META-INF/**/*</exclude>
+          <exclude>OSGI-INF/**/*</exclude>
+        </excludes>
+      </resource>
+
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>META-INF/**/*</include>
+          <include>OSGI-INF/**/*</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <testResources>
+      <testResource>
+        <targetPath>${basedir}/target</targetPath>
+        <filtering>true</filtering>
+        <directory>${basedir}/src/test/config/javascript</directory>
+        <includes>
+          <include>*.js</include>
+        </includes>
+        <excludes/>
+      </testResource>
+    </testResources>
+
     <plugins>
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <configuration>
-          <instructions>
-            <Import-Package>org.pentaho.di.osgi,*</Import-Package>
-          </instructions>
-        </configuration>
       </plugin>
     </plugins>
   </build>

@@ -1,5 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea
+.DS_Store
+node
+node_modules/
 *.iml
-assemblies/core/target
-impl/target
+target
+.idea
