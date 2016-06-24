@@ -14,6 +14,7 @@
     "karma-coverage": "^0.5.3",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-chrome-launcher": "^0.2.2",
+    "karma-requirejs": "0.2.x",
     "karma-mocha-reporter": "^1.1.6"
   }
 }
