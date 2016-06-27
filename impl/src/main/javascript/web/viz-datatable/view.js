@@ -68,6 +68,7 @@ define([
       var h = this.model.getv("height");
 
       $(this._element).css({ width: w, height: h });
+      this.dTable.columns.adjust();
     },
 
     /** @override */
