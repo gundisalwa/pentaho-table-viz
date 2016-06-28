@@ -19,7 +19,15 @@
   },
 
   "dependencies": {
+
+    "requirejs": "${requirejs.version}",
+    "require-css": "${require-css.version}",
+    "requirejs-text": "${requirejs-text.version}",
+
     "underscorejs": "${underscore.version}",
+    "jquery": "${jquery.version}",
+    "bootstrap-css": "${bootstrap.version}",
+
     "datatables.net": "${datatables.net.version}",
     "datatables.net-bs": "${datatables.net-bs.version}",
     "datatables.net-fixedheader": "${datatables.net-fixedheader.version}",
@@ -27,8 +35,10 @@
     "datatables.net-scroller": "${datatables.net-scroller.version}",
     "datatables.net-scroller-bs": "${datatables.net-scroller-bs.version}",
     "datatables.net-colreorder": "${datatables.net-colreorder.version}",
-    "datatables.net-colreorder-bs": "${datatables.net-colreorder-bs.version}",
-    "bootstrap-css": "${bootstrap.version}",
-    "jquery": "${jquery.version}"
+    "datatables.net-colreorder-bs": "${datatables.net-colreorder-bs.version}"
+  },
+
+  "paths": {
+    "viz-datatable": "../../${project.artifactId}/${project.version}/viz-datatable"
   }
 }
