@@ -31,7 +31,6 @@ define([
       height:   1,
       data:     {v: {}}
     });
-    var props = Model.type._props;
 
     it("should be a function", function() {
       expect(typeof VizView).toBe("function");
@@ -58,20 +57,24 @@ define([
       }, done.fail);
     });
 
-    it("should be able to access the required properties", function(done) {
-      var elem = document.createElement("div");
-      var view = new VizView(elem, model);
+    it("should be able to access the required properties exposed by the model", function() {
+      expect(model.getv("fixedHeader")).toBeDefined();
+      expect(model.getv("ordering")).toBeDefined();
+      expect(model.getv("colReorder")).toBeDefined();
+      expect(model.getv("scroller")).toBeDefined();
+      expect(model.getv("scrollY")).toBeDefined();
+    });
 
-      spyOn(view, "_render");
+    describe("DataTables", function() {
 
-      view.render().then(function() {
-        expect(model.getv("fixedHeader")).toBeDefined();
-        expect(model.getv("ordering")).toBeDefined();
-        expect(model.getv("colReorder")).toBeDefined();
-        expect(model.getv("scroller")).toBeDefined();
-        expect(model.getv("scrollY")).toBeDefined();
-        done();
-      }, done.fail);
+      it("should call DataTable with the given params", function() {
+        var data = { data: {} };
+        var dataTablesSpy = spyOn($.fn, "DataTable").and.callFake(function(props) {
+          expect(props).toEqual(data);
+        });
+        $.fn.DataTable(data);
+        expect(dataTablesSpy).toHaveBeenCalledWith(data);
+      });
     });
   });
 });
