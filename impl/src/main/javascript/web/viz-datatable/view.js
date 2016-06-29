@@ -23,6 +23,7 @@ define([
       this.base();
 
       this.tElement = $('<table class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">');
+      $(this._element).empty();
       $(this._element).append(this.tElement);
     },
 
@@ -59,6 +60,7 @@ define([
         scroller:         this.model.getv("scroller"),
         scrollY:          this.model.getv("scrollY")
       });
+      this.dTable.columns.adjust();
     },
 
     /** @override */
