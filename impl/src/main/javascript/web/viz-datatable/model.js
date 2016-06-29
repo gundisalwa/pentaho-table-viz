@@ -9,7 +9,7 @@ define([
 
     return BaseModel.extend({
       type: {
-        id: "viz-datatable",
+        id: "pentaho-table-viz-impl_7.0-SNAPSHOT/viz-datatable",
         view: View,
         isBrowsable: true,
         isAbstract: false,
