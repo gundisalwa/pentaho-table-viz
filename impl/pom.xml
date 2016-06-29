@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -22,31 +22,13 @@
   </properties>
 
   <dependencies>
+    <!-- Client Side Dependencies -->
     <dependency>
       <groupId>pentaho</groupId>
       <artifactId>common-ui</artifactId>
-      <version>${common-ui.revision}</version>
+      <version>${dependency.common-ui.revision}</version>
       <type>zip</type>
       <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>requirejs</artifactId>
-      <version>${requirejs.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>require-css</artifactId>
-      <version>${require-css.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>requirejs-text</artifactId>
-      <version>${requirejs-text.version}</version>
     </dependency>
 
     <dependency>
@@ -138,7 +120,6 @@
         <excludes>
           <exclude>META-INF/**/*</exclude>
           <exclude>OSGI-INF/**/*</exclude>
-          <exclude>web/index.html</exclude>
         </excludes>
       </resource>
 
@@ -148,14 +129,6 @@
         <includes>
           <include>META-INF/**/*</include>
           <include>OSGI-INF/**/*</include>
-          <include>web/index.html</include>
-        </includes>
-      </resource>
-
-      <resource>
-        <directory>src/main/javascript</directory>
-        <includes>
-          <include>**/*</include>
         </includes>
       </resource>
     </resources>
@@ -176,13 +149,6 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <configuration>
-          <instructions>
-            <Export-Package>
-              org.pentaho.det.*
-            </Export-Package>
-          </instructions>
-        </configuration>
       </plugin>
     </plugins>
   </build>

@@ -4,11 +4,7 @@
 
     <details>Pentaho Table Viz assembly for all</details>
 
-    <bundle dependency="false">pentaho-platform-plugin-mvn:pentaho/common-ui/${common-ui.revision}/zip</bundle>
-
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/requirejs/${requirejs.version}</bundle>
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/require-css/${require-css.version}</bundle>
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/requirejs-text/${requirejs-text.version}</bundle>
+    <bundle dependency="false">pentaho-platform-plugin-mvn:pentaho/common-ui/${dependency.common-ui.revision}/zip</bundle>
 
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars/underscorejs/${underscore.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars/jquery/${jquery.version}</bundle>
@@ -23,5 +19,9 @@
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-colreorder/${datatables.net-colreorder.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-colreorder-bs/${datatables.net-colreorder-bs.version}</bundle>
 
+    <!-- <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/require-css/${require-css.version}</bundle> -->
+     <!-- <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/require-css/${dependency.require-css.version}</bundle>
+      -->
   </feature>
+
 </features>
