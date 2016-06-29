@@ -94,7 +94,7 @@ define([
     var tData = { data: [], columns: [] };
 
     _.each(data.model.attributes, function(attr, a){
-      tData.columns.push({title: attr.label});
+      tData.columns.push({title: attr.name});
     });
 
     _.each(data.implem.rows, function(row, r){
