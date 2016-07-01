@@ -27,6 +27,7 @@ define([
       type: {
         id: "pentaho-table-viz-impl_7.0-SNAPSHOT/viz-datatable",
         view: View,
+        label: 'Flat Table',        
         isBrowsable: true,
         isAbstract: false,
         props: [
