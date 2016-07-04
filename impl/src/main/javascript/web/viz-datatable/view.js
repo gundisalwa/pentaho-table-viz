@@ -15,14 +15,14 @@
  */
 define([
   "pentaho/visual/base/View",
-  "underscorejs",
+  "underscore",
   "jquery",
   "datatables.net",
   "datatables.net-bs",
   "datatables.net-fixedheader",
   "datatables.net-colreorder",
   "datatables.net-scroller",
-  "css!bootstrap-css.css",
+  "css!bootstrap/dist/css/bootstrap.css",
   "css!datatables.net-bs/css/dataTables.bootstrap.css",
   "css!datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.css",
   "css!datatables.net-colreorder-bs/css/colReorder.bootstrap.css",
