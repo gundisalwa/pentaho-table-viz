@@ -6,14 +6,14 @@
 
     <bundle dependency="false">pentaho-platform-plugin-mvn:pentaho/common-ui/${common-ui.revision}/zip</bundle>
 
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/requirejs/${requirejs.version}</bundle>
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/requirejs/${requirejs.version}</bundle>
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/jquery/${jquery.version}</bundle>
+
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.npm/underscore/${underscore.version}</bundle>
+
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/require-css/${require-css.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/requirejs-text/${requirejs-text.version}</bundle>
-
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/underscorejs/${underscore.version}</bundle>
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/jquery/${jquery.version}</bundle>
-    <bundle dependency="false">pentaho-webjars:mvn:org.webjars/bootstrap/${bootstrap.version}</bundle>
-
+    <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/bootstrap/${bootstrap.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net/${datatables.net.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-bs/${datatables.net-bs.version}</bundle>
     <bundle dependency="false">pentaho-webjars:mvn:org.webjars.bower/datatables.net-fixedheader/${datatables.net-fixedheader.version}</bundle>
